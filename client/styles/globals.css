@@ -1,0 +1,58 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url('../public/background.jpg');
+  background-repeat: repeat;
+}
+
+a {
+  color: #221d1b !important;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:hover{
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.input{
+  margin-left: 1rem;
+}
+.cities-wrapper{
+  margin-top: 2rem;
+}
+
+label{
+  color: aquamarine;
+}
+
+button{
+  cursor: pointer;
+}
+
+.city{
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: aqua;
+  text-align: center;
+}
+
+.city:hover{
+  transform: scale(1.2);
+}
+
+.weather-card{
+  background-color: rgba(0, 0, 0, 0.452);
+  padding: 2rem;
+}
+
+
