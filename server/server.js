@@ -8,7 +8,11 @@ const app = express();
 const { getWeatherDataFromCity, setWeatherData } = require('./database/interfaces');
 const { isValidDate } = require('./helpers');
 
-app.use(cors());
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
+}
+app.use(cors(corsOptions));
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

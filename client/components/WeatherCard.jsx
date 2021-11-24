@@ -4,19 +4,17 @@ import { WeatherBitIconUrl } from "../constants";
 import { getUrlFromCityAndDate, isValidDate } from "../helpers";
 
 
-
-
 export default function WeatherCard({ data }) {
     const router = useRouter();
     const { cityName, date } = router.query;
     const [isCelsius, setIsCelsius] = useState(true);
     const {
         temp,
-        sunrise,
-        sunset,
+        wind_spd,
         timezone,
         rh,
         clouds,
+        aqi,
         weather: { description, icon }
     } = data;
     const fahre = (temp * 9 / 5) + 32;
@@ -67,18 +65,26 @@ export default function WeatherCard({ data }) {
                 </div>
             </div>
             <div className="item row">
-                <div className="key col-md-4 text-warning">Sunrise: </div>
+                <div className="key col-md-4 text-warning">Local Timezone: </div>
                 <div className="value col-md-7 text-info">
                     <b>
-                        {sunrise} Local Time ({timezone} Timezone)
+                        ({timezone} Timezone)
                     </b>
                 </div>
             </div>
             <div className="item row">
-                <div className="key col-md-4 text-warning">Sunset: </div>
+                <div className="key col-md-4 text-warning">Wind Speed: </div>
                 <div className="value col-md-7 text-info">
                     <b>
-                        {sunset} Local Time ({timezone} Timezone)
+                        {wind_spd} m/s
+                    </b>
+                </div>
+            </div>
+            <div className="item row">
+                <div className="key col-md-4 text-warning">Air Quality (AQI): </div>
+                <div className="value col-md-7 text-info">
+                    <b>
+                        {aqi} 
                     </b>
                 </div>
             </div>

@@ -8,7 +8,7 @@ export default function IndexPage() {
         <div className={styles.container}>
             <Layout>
                 <p>
-                    Ooops!! Looks like you're lost.
+                    Ooops!! Looks like you&apos;re lost.
                 </p>
                 <button
                     className='btn btn-info'
